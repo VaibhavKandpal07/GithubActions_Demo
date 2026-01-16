@@ -8,10 +8,22 @@ jobs:
     steps:            #Step is what we want to perform in a job . steps are the individual actions or commands that run inside a job, one after another.
                       # runs-on → machine (Ubuntu / Windows / macOs)
                       # steps → commands like checkout, build, test, deploy
-      - name: HelloStep1
+      - name: Build Phase  
         run: |
           echo "This is line 1"
-          echo "This is line 2"
-      
+          echo "This is line2 "
+          
+          
+  test:
+     runs-on: ubuntu-latest
+     steps:
+       - name: Test Phase
+         run: echo "Running Several Tests Lie the Unit Testing, Integration Testing, End to End testing"
+
+  deploy:
+     runs-on: ubuntu-latest
+     steps:
+      - name: Deploy The Fucking App
+        run: echo " Deploying the App now"
        
   # we can create and run multiple shell commands in a single step above example is the evidence of this
