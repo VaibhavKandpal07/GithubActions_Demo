@@ -9,7 +9,9 @@ jobs:
                       # runs-on → machine (Ubuntu / Windows / macOs)
                       # steps → commands like checkout, build, test, deploy
       - name: HelloStep1
-        run: echo "Welcome to GitHubActions"
+        run: |
+          echo "This is line 1"
+          echo "This is line 2"
       
        
-  
+  # we can create and run multiple shell commands in a single step above example is the evidence of this
