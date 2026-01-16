@@ -9,7 +9,7 @@ jobs:
                       # runs-on → machine (Ubuntu / Windows / macOs)
                       # steps → commands like checkout, build, test, deploy
       - name: HelloStep1
-        run: echo"Welcome to GitHubActions"
+        run: echo "Welcome to GitHubActions"
       
        
   
