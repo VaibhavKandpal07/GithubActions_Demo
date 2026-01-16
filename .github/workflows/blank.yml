@@ -16,12 +16,14 @@ jobs:
           
   test:
      runs-on: ubuntu-latest
+     needs: build
      steps:
        - name: Test Phase
          run: echo "Running Several Tests Lie the Unit Testing, Integration Testing, End to End testing"
 
   deploy:
      runs-on: ubuntu-latest
+     needs: test
      steps:
       - name: Deploy The Fucking App
         run: echo " Deploying the App now"
