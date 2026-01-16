@@ -1,0 +1,15 @@
+name: Hello World # Workflow name . As we already know we create a repo -> then in the repo we create -> workflow a
+                  # And in that workflow we create the jobs and jobs are nothing but let say if we are implementing ci 
+                  # so jobs are build and test .concurrency: 
+on: workflow_dispatch # this is triggeres configured as on concurrency: 
+jobs:
+  build:              # this is the job name which u created inside your workflow 
+    runs-on: ubuntu-latest
+    steps:            #Step is what we want to perform in a job . steps are the individual actions or commands that run inside a job, one after another.
+                      # runs-on → machine (Ubuntu / Windows / macOs)
+                      # steps → commands like checkout, build, test, deploy
+      - name: HelloStep1
+        run: echo"Welcome to GitHubActions"
+      
+       
+  
