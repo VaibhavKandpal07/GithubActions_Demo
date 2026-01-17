@@ -1,7 +1,7 @@
 name: Hello World # Workflow name . As we already know we create a repo -> then in the repo we create -> workflow a
                   # And in that workflow we create the jobs and jobs are nothing but let say if we are implementing ci 
                   # so jobs are build and test .concurrency: 
-on: workflow_dispatch # this is triggeres configured as on concurrency: 
+on: push # this is triggers configured as on concurrency: 
 jobs:
   build:              # this is the job name which u created inside your workflow 
     runs-on: ubuntu-latest
@@ -9,23 +9,8 @@ jobs:
                       # runs-on → machine (Ubuntu / Windows / macOs)
                       # steps → commands like checkout, build, test, deploy
       - name: Build Phase  
-        run: |
-          echo "This is line 1"
-          echo "This is line2 "
+        run: echo "A Demo build"
           
           
-  test:
-     runs-on: ubuntu-latest
-     needs: build
-     steps:
-       - name: Test Phase
-         run: echo "Running Several Tests Lie the Unit Testing, Integration Testing, End to End testing"
 
-  deploy:
-     runs-on: ubuntu-latest
-     needs: test
-     steps:
-      - name: Deploy The Fucking App
-        run: echo " Deploying the App now"
-       
   # we can create and run multiple shell commands in a single step above example is the evidence of this
