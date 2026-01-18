@@ -9,7 +9,7 @@ jobs:
                       # runs-on → machine (Ubuntu / Windows / macOs)
                       # steps → commands like checkout, build, test, deploy
       - name: Build Phase  
-        run: echo "A Demo build"
+        run: echo "Hello, ${{vars.My_Name}}"
           
           
 
