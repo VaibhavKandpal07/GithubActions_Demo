@@ -9,7 +9,7 @@ jobs:
                       # runs-on → machine (Ubuntu / Windows / macOs)
                       # steps → commands like checkout, build, test, deploy
       - name: Build Phase  
-        run: echo "Hello, ${{vars.My_Name}}"
+        run: echo "Hello, ${{vars.My_Name}}" # Created a variable after this i will create a secret 
           
           
 
