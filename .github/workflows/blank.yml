@@ -1,7 +1,17 @@
 name: Hello World # Workflow name . As we already know we create a repo -> then in the repo we create -> workflow a
                   # And in that workflow we create the jobs and jobs are nothing but let say if we are implementing ci 
                   # so jobs are build and test .concurrency: 
-on: push # this is triggers configured as on concurrency: 
+on:  # this is triggers configured as on concurrency:
+         # If you want to specify, multiple trigger options for on we can do it without any problem.beow 
+         # ["push", "pull_request"] 
+  push:
+    branches: 
+      - main
+      - develop
+      - 'release/**'
+  pull_request:
+    branches:
+      - main   
 jobs:
   build:              # this is the job name which u created inside your workflow 
     runs-on: ubuntu-latest
