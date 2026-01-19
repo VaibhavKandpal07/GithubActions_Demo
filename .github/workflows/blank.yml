@@ -10,7 +10,11 @@ jobs:
                       # steps → commands like checkout, build, test, deploy
       - name: Build Phase  
         run: echo "Hello, ${{vars.My_Name}}" # Created a variable after this i will create a secret 
-          
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Test Phase
+        run: echo "The Test has been Successfully conducted"
           
 
   # we can create and run multiple shell commands in a single step above example is the evidence of this
