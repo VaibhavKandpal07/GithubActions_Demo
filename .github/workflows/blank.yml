@@ -14,7 +14,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Test Phase
-        run: echo "The Test has been Successfully conducted"
+        run: |
+         echo "The Test has been Successfully conducted"
+         echo "Hello,  ${{ secrets.Docker_Password }}"
           
 
   # we can create and run multiple shell commands in a single step above example is the evidence of this
