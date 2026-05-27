@@ -11,7 +11,7 @@ jobs:
                       # runs-on → machine (Ubuntu / Windows / macOs)
                       # steps → commands like checkout, build, test, deploy
       - name: Build Phase  
-        run: echo "Hello The build is also done , ${{vars.My_Name}}" # Created a variable after this i will create a secret 
+        run: echo "Hello The build is also done , ${{vars.My_Name}}. And my nick name is ${{vars.MY_NICKNAME}}" # Created a variable after this i will create a secret 
   test:
     runs-on: ubuntu-latest
     steps:
