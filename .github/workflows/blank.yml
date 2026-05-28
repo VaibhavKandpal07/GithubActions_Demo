@@ -19,6 +19,6 @@ jobs:
         run: |
          echo "The Test has been Successfully conducted"
          echo "Hello,  ${{ secrets.Docker_Password }}"
-         echo "hello here we re accesing secret, ${{secrets.Kuber_Password}}   " 
+         echo "hello here we re accesing secret, ${{secrets.Kubernet_Password}}   " 
 
   # we can create and run multiple shell commands in a single step above example is the evidence of this
