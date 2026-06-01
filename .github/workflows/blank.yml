@@ -5,6 +5,17 @@ on: ["push","pull_request"]
 # Multiple Triggers for two separate event 
  # this is triggers configured as on concurrency: 
 jobs:
+  action-demo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the code
+        uses: actions/checkout/@v4
+
+      - name: Setup the Latest Java Version
+        uses: actions/setup-java/@v4
+        with: 
+              java-version: '21'
+              distribution: 'temurin'
   build:              # this is the job name which u created inside your workflow 
     runs-on: ubuntu-latest
     steps:            #Step is what we want to perform in a job . steps are the individual actions or commands that run inside a job, one after another.
